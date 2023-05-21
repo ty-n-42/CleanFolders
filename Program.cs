@@ -80,7 +80,6 @@ namespace CleanFolders
             System.Console.WriteLine(" cleaning files for " + folderPath);
 
             System.Collections.Concurrent.ConcurrentStack<string> deletedFiles = new System.Collections.Concurrent.ConcurrentStack<string>();
-            System.Collections.Concurrent.ConcurrentDictionary<string, int> fileExtensions = new System.Collections.Concurrent.ConcurrentDictionary<string, int>();
 
             System.Collections.Generic.IEnumerable<string> subfolderPathsEnumeration = System.IO.Directory.EnumerateDirectories(folderPath, "*.*", System.IO.SearchOption.AllDirectories);
             foreach (string subfolderPath in subfolderPathsEnumeration)
